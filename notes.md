@@ -264,7 +264,22 @@
 
     [ Refer Here : https://mailtrap.io/ ]
 
-### 
+### Monitoring and Observability Setup
+
+#### Labsetup
+
+* We will be using two elastic cloud accounts
+    * one account for dev/experimentation
+    * other account for making nopCommerce observable
+* We need a mail trap setup for alerts where we will have two inboxes
+
+### Working with Elastic Stack
+
+* Understanding of YAML
+
+    [ Refer here : https://www.youtube.com/watch?v=ggOmHlnhPaM&list=PLuVH8Jaq3mLud3sVDvJ-gJ__0zd15wGDd&index=16 ]
+
+
 
 
 

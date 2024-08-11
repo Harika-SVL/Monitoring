@@ -279,7 +279,112 @@
 
     [ Refer here : https://www.youtube.com/watch?v=ggOmHlnhPaM&list=PLuVH8Jaq3mLud3sVDvJ-gJ__0zd15wGDd&index=16 ]
 
+### Elastic Cloud Account Setup
 
+* Create a free trail account 
+
+    [ Refer Here : https://www.elastic.co/cloud/ ]
+
+![alt text](shots/10.PNG)
+![alt text](shots/11.PNG)
+![alt text](shots/12.PNG)
+![alt text](shots/13.PNG)
+![alt text](shots/14.PNG)
+![alt text](shots/15.PNG)
+![alt text](shots/16.PNG)
+
+* Let's setup connectors for communications (email/teams/slack)
+
+![alt text](shots/17.PNG)
+![alt text](shots/18.PNG)
+![alt text](shots/19.PNG)
+![alt text](shots/20.PNG)
+
+* For email create account in mailtrap and use the credentials of mail trap over here
+* Enter the details of mail trap in email and run the test 
+
+![alt text](shots/21.PNG)
+![alt text](shots/22.PNG)
+
+### Workflow
+
+* Overview
+
+![alt text](shots/23.PNG)
+
+* We will have a system with heartbeat installed which checks if the application/server is up or not and reports the status to elastic cloud (elastic search)
+* The uptime in observability section of elastic cloud will show the status of each service/server from which you can configure alerts based on connectors
+
+### Uptime Monitoring
+
+* For the overview of the setup
+
+![alt text](shots/24.PNG)
+
+* Let's create a linux machine and
+    * install heart beat
+    * configure heart beat to send metrics to elastic  cloud
+* We will be configuring heart beat to check if the
+    * apache  server is alive
+    ```
+    bash
+    sudo apt update
+    sudo apt install apache2 -y
+    ```
+* _**Heart beat installation**_ :
+    
+* For the overview [  Refer Here : https://www.elastic.co/guide/en/beats/heartbeat/current/heartbeat-installation-configuration.html ]
+
+* For official doc's on installing heart beat
+
+    [ Refer here : https://www.elastic.co/guide/en/beats/heartbeat/current/heartbeat-installation-configuration.html#installation ] 
+    
+* For apt based installation
+
+    [ Refer Here : https://www.elastic.co/guide/en/beats/heartbeat/current/setup-repositories.html#_apt ]
+
+* _**Configuration**_ :
+
+* All the elastic stack is generally installed and configuration files are stored in similar directories
+
+* _**config location**_ : `/etc/<prod-name>`
+
+* _**install location**_ : `/usr/share/<prod-name>`
+
+* Edit `/etc/heartbeat/heartbeat.yml` to add cloud id and auth
+* What has to be monitored
+    * apache server
+    * Monitor types: 
+    
+    [ Refer Here : https://www.elastic.co/guide/en/beats/heartbeat/current/configuration-heartbeat-options.html#monitor-types ]
+
+* Configuration 
+
+![alt text](shots/25.PNG)
+
+* Start heart beat: 
+
+    [ Refer Here : https://www.elastic.co/guide/en/beats/heartbeat/current/heartbeat-installation-configuration.html#start ]
+
+![alt text](shots/26.PNG)
+
+* Now open kibana & navigate to uptime
+
+![alt text](shots/27.PNG)
+![alt text](shots/28.PNG)
+
+* To view th down status. stop the service and wait for the page to reload
+
+![alt text](shots/29.PNG)
+
+* Let's create an alert to send email about status of server
+
+![alt text](shots/30.PNG)
+![alt text](shots/31.PNG)
+
+* _**Exercise**_ : Create an alert to check if the nop-app and nop-db is up or not
+
+### 
 
 
 

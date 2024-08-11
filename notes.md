@@ -415,8 +415,25 @@
 * Understanding system architectures
 * System Design fundamentals
 
-### 
+### Troubleshooting Beats
 
+* All the elastic componets logs can be viewed using _**journalctl**_ `journalctl -u heartbeat-elastic.service`
+* Look into yaml for syntax issues and cloud id and auth for configuration
+* Ensure metrics are enabled
+
+![alt text](shots/32.PNG)
+![alt text](shots/33.PNG)
+
+### Metric Beat
+
+* This beat collects metrics about system and some predefined applications
+* Install metric beat 
+
+    [ Refer Here : https://www.elastic.co/guide/en/beats/metricbeat/8.7/setup-repositories.html#_apt ]
+
+* We will get system and nginx metrics to elastic cloud in next session
+
+### 
 
 
 

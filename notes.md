@@ -433,7 +433,26 @@
 
 * We will get system and nginx metrics to elastic cloud in next session
 
-### 
+### Metric Beats to Capture Metrics
+
+* Enable nginx metrics
+    * navigate to /etc/metricbeat/modules.d and rename nginx.yml.disabled to nginx.yml
+    * copy the dashboards into bin `sudo cp -r /usr/share/metricbeat/kibana/ /usr/share/metricbeat/bin`
+* Now start the metric beat after setting in metricbeat.yml
+    * cloud.id
+    * cloud.auth
+    * kibana url
+* We have configured all dashboards
+    * System Overview :
+
+    ![alt text](shots/34.PNG)
+
+    * Apache Dashboard
+
+    ![alt text](shots/35.PNG)
+
+
+
 
 
 

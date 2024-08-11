@@ -382,9 +382,39 @@
 ![alt text](shots/30.PNG)
 ![alt text](shots/31.PNG)
 
-* _**Exercise**_ : Create an alert to check if the nop-app and nop-db is up or not
+### Exercise
 
-### 
+* Create an alert to check if the nop-app and nop-db is up or not
+* Create a linux vm install apache/nginx.
+* Also create uptime dashboard in elastic stack
+    * based on icmp (ping)
+    * based on http
+
+### Basic Check list
+
+* Create a linux vm in any  cloud and ssh into it
+* Create a ssh key from cloud and importing ssh into cloud from your system
+* Concept of Service/Daemon
+* Package management – apt
+* json and yaml files
+*concept of sudo
+* using vi or nano editor
+*Fixing:
+    * Post on Slack
+
+### Novice Check List
+
+* knowing the problem. log files and read the logs to figure out errors
+* installation steps and configuration steps for any application
+* Concept of environmental variables and setting
+    * User
+    * System
+
+### Expert Check list
+
+* Understanding system architectures
+* System Design fundamentals
+
 
 
 

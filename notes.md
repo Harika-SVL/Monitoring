@@ -483,7 +483,40 @@
 
 ![alt text](shots/36.PNG)
 
-### 
+### Logstash
+
+* Let's create a linux vm and explore logstash
+
+### Logstash pipeline
+
+* Logstash pipeline syntax
+```
+input {}
+filter {}
+output {}
+```
+* In input section we can define the datasources from where we process inputs `Extract`
+* In Filter section we define the transformations `Transform`
+* In output section we define the destination `Load`
+* The list of inputs is all the installed logstash input plugins and same with other sections
+
+### Let's create a very basic pipeline which reads input from stdin and displays out to stdout
+
+* Stdin input plugin Refer Here
+* Stdout output plugin Refer Here
+* Pipeline
+```
+input {
+    stdin {
+    }
+}
+output {
+    stdout {
+    }
+}
+```
+* Create a file with above content in /tmp/first.conf
+cd in /usr/share/logstash and execute the following command sudo ./bin/logstash -f /tmp/first.conf
 
 
 

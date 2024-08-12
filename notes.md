@@ -451,7 +451,14 @@
 
     ![alt text](shots/35.PNG)
 
+### Log Analysis
 
+
+* Every logging mechanism will have levels, most widely adopted levels are
+    * _**INFO**_ : This is informational log
+    * _**DEBUG**_ : This is informative log
+    * _**ERROR**_ : This represents errors
+    * _**CRITICAL/FATAL**_ : This represents serious system failures
 
 
 

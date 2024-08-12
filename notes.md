@@ -460,6 +460,31 @@
     * _**ERROR**_ : This represents errors
     * _**CRITICAL/FATAL**_ : This represents serious system failures
 
+* Logs are time based information.
+* In Elastic Stack we have logstash which can extract the logs, transform and load into elastic search for querying/visualizations
+* Logstash does the transformations with the help of plugins
+    * _**input plugins**_ : to read from different sources,for input plugins supported by logstash
+
+    [ Refer Here : https://www.elastic.co/guide/en/logstash/current/input-plugins.html ]
+
+    * _**filter plugins**_ : to transform the log,for filter plugins
+
+    [ Refer Here : https://www.elastic.co/guide/en/logstash/current/filter-plugins.html ]
+
+    * _**output plugins**_ : to store the output to different sources, for output plugins
+
+    [ Refer Here : https://www.elastic.co/guide/en/logstash/current/output-plugins.html ]
+
+* Installing logstash :
+
+    [ Refer Here : https://www.elastic.co/guide/en/logstash/current/installing-logstash.html#_apt ]
+
+* Ideal use case for us
+
+![alt text](shots/36.PNG)
+
+### 
+
 
 
 

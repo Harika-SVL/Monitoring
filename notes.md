@@ -535,7 +535,92 @@ output {
 ```
 ![alt text](shots/38.PNG)
 
-* 
+* Let's add one more output to some file `stdout => codec => rubydebug
+* For file output plugin
+
+    [ Refer Here : https://www.elastic.co/guide/en/logstash/current/plugins-outputs-file.html ]
+
+```
+input {
+    stdin {
+    }
+}
+output {
+    stdout {
+    }
+    file {
+        path => "/tmp/output%{+YYYY-MM-dd}.txt"
+    }
+}
+```
+![alt text](shots/39.PNG)
+
+* Open the file for contents
+
+![alt text](shots/40.PNG)
+
+### Activity 2 : Let's create a pipeline to read the file /tmp/test and display the contents in stdout
+
+* input = file
+* output = stdout
+```
+input {
+    file {
+        path => ["/tmp/test"]
+    }
+}
+output {
+    stdout {
+
+    }
+}
+```
+* install apache and redirect `/var/log/apache2/access.log` to stdout
+```
+input {
+    file {
+        path => ["/var/log/apache2/access.log"]
+    }
+}
+output {
+    stdout {
+
+    }
+}
+```
+* Let's try to understand filters.
+* Grok filter can parse unstructured data into fields 
+
+    [ Refer Here : https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html ]
+
+### 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

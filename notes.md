@@ -515,8 +515,27 @@ output {
     }
 }
 ```
-* Create a file with above content in /tmp/first.conf
-cd in /usr/share/logstash and execute the following command sudo ./bin/logstash -f /tmp/first.conf
+* Create a file with above content in `/tmp/first.conf`
+cd in `/usr/share/logstash` and execute the following command `sudo ./bin/logstash -f /tmp/first.conf`
+
+![alt text](shots/37.PNG)
+
+* Now let's the codec from rubydebug to json
+Edit first.conf with following content and start logstash `sudo ./bin/logstash -f /tmp/first.conf`
+```
+input {
+    stdin {
+    }
+}
+output {
+    stdout {
+        codec => json
+    }
+}
+```
+![alt text](shots/38.PNG)
+
+* 
 
 
 

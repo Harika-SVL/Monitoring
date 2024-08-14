@@ -690,6 +690,77 @@ done
 [INFO ] 2023-05-19 03:52:25.066 [[main]>worker0] file - Opening file {:path=>"/tmp/test.log"}
 ```
 
+### Fixing logstash issue with elastic cloud
+
+* We had issue with pipeline id. removed the pipeline field
+* Restarted all the services and executing requests from a script
+* So filebeat reads the logs and sends to logstash, logstash breaks the message into multiple fields and stores in elastic search with index name `apachelog-*`
+* Now create a data view from kibana
+
+![alt text](shots/50.PNG)
+![alt text](shots/51.PNG)
+
+* Watch the classroom video for visualizations
+* We were able to search logs by writing simple queries and create pie charts, line charts, metric etc
+
+### Let's trace some java application
+
+* Installing sample application
+    * openjdk 11
+    ```
+    sudo apt update
+    sudo apt install openjdk-11-jdk -y
+    ```
+    * download the jar file 
+    
+    [ Refer Here : https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/spring-petclinic-2.4.2.jar ]
+
+* Open APM
+
+![alt text](shots/52.PNG)
+![alt text](shots/53.PNG)
+![alt text](shots/54.PNG)
+
+* Java app tracing
+
+![alt text](shots/55.PNG)
+
+* Download apm-agent jar `wget https://oss.sonatype.org/service/local/repositories/releases/content/co/elastic/apm/elastic-apm-agent/1.38.0/elastic-apm-agent-1.38.0.jar`
+* We have run the app with following args
+```
+java -javaagent:elastic-apm-agent-1.38.0.jar \
+-Delastic.apm.service_name=pet-clinic \
+-Delastic.apm.secret_token=uu0Dl9Q09RFfMdq86p \
+-Delastic.apm.server_url=https://eff6e04ad9d6425fa3492b1a56f794a3.apm.us-central1.gcp.cloud.es.io:443 \
+-Delastic.apm.environment=dev \
+-Delastic.apm.application_packages=org.spring \
+-jar spring-petclinic-2.4.2.jar
+```
+* Use the application and launch apm
+
+![alt text](shots/56.PNG)
+![alt text](shots/57.PNG)
+![alt text](shots/58.PNG)
+![alt text](shots/59.PNG)
+![alt text](shots/60.PNG)
+
+### Site Reliability Engineering (SRE)
+
+* These are processes followed by Google to run its production systems 
+
+    [ Refer Here : https://sre.google/books/ ]
+
+![alt text](shots/61.PNG)
+
+* For the article on SRE
+
+    [ Refer Here : https://directdevops.blog/2019/10/22/site-reliability-engineering-overview/ ]
+
+### Exercises
+
+ 1. Make nop commerce observable
+ 2. Post k8s metrics to elastic cloud
+
 
 
 

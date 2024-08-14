@@ -619,8 +619,58 @@ output {
 
     [ Refer Here : https://grokdebugger.com/ ]
 
-###
+### Sending logs to elastic cloud
 
+* Overview
+
+![alt text](shots/48.PNG)
+
+* Install apache and filebeat on one linux instance 
+
+    [ Refer Here : https://www.elastic.co/guide/en/beats/filebeat/current/setup-repositories.html ]
+
+```
+sudo apt update
+sudo apt install apache2 -y
+```
+* Install  logstash on other linux instance 
+
+    [ Refer Here : https://www.elastic.co/guide/en/logstash/current/installing-logstash.html ]
+
+### Configuring filebeats to send apache access logs to logstash
+
+* For basic configuration information
+
+    [  Refer Here : https://www.elastic.co/guide/en/beats/filebeat/current/logstash-output.html ]
+
+* Sending data from logstash to elastic  cloud 
+
+    [ Refer Here : https://www.elastic.co/guide/en/logstash/current/connecting-to-cloud.html ]
+
+* Logstash pipeline
+```
+input {
+  beats {
+    port => 5044
+  }
+}
+filter {
+    grok {
+        match => { "message" => "%{COMBINEDAPACHELOG}" }
+    }
+
+}
+output {
+    elasticsearch {
+        cloud_id => "learningenv:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyQxMDg1YTVjOWQyOWY0N2FjODkyNTBmNjY3NjJkYWU3MyRlNDM5MGRmYmJmMzM0MGViODZiMGNhNTg3ODA1MmZkOQ=="
+        cloud_auth => "elastic:h22oWprNjqqbEGTKPSvHHpqS"
+    }
+    file {
+        path => /tmp/test.log
+    }
+}
+```
+* 
 
 
 

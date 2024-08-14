@@ -595,8 +595,31 @@ output {
 
 ### Grok Patterns
 
-* 
+* Open the DevTools in Kibana and then Grok Debugger
 
+![alt text](shots/41.PNG)
+![alt text](shots/42.PNG)
+
+* For the grok filter in logstash
+
+    [ Refer Here : https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html ]
+
+* For writing your own patterns use regex 
+    [ Refer Here : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet ]
+
+* Let's try to build a simple pattern as shown below
+
+![alt text](shots/43.PNG)
+![alt text](shots/44.PNG)
+![alt text](shots/45.PNG)
+![alt text](shots/46.PNG)
+![alt text](shots/47.PNG)
+
+* For grok debugger
+
+    [ Refer Here : https://grokdebugger.com/ ]
+
+###
 
 
 

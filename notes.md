@@ -692,7 +692,7 @@ done
 
 ### Fixing logstash issue with elastic cloud
 
-* We had issue with pipeline id. removed the pipeline field
+* We had issue with pipeline id, removed the pipeline field
 * Restarted all the services and executing requests from a script
 * So filebeat reads the logs and sends to logstash, logstash breaks the message into multiple fields and stores in elastic search with index name `apachelog-*`
 * Now create a data view from kibana
@@ -700,7 +700,6 @@ done
 ![alt text](shots/50.PNG)
 ![alt text](shots/51.PNG)
 
-* Watch the classroom video for visualizations
 * We were able to search logs by writing simple queries and create pie charts, line charts, metric etc
 
 ### Let's trace some java application
@@ -711,7 +710,7 @@ done
     sudo apt update
     sudo apt install openjdk-11-jdk -y
     ```
-    * download the jar file 
+    * Download the jar file 
     
     [ Refer Here : https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/spring-petclinic-2.4.2.jar ]
 

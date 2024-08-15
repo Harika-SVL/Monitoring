@@ -260,12 +260,12 @@
 
     [ Refer Here : https://mailtrap.io/ ]
 
-### Monitoring and Observability Setup
+### Monitoring and Observability setup
 
-#### Labsetup
+#### Lab Setup
 
 * We will be using two elastic cloud accounts
-    * one account for dev/experimentation
+    * one account for dev / experimentation
     * other account for making nopCommerce observable
 * We need a mail trap setup for alerts where we will have two inboxes
 
@@ -289,14 +289,14 @@
 ![alt text](shots/15.PNG)
 ![alt text](shots/16.PNG)
 
-* Let's setup connectors for communications (email/teams/slack)
+* Let's setup connectors for communications ( email / teams / slack )
 
 ![alt text](shots/17.PNG)
 ![alt text](shots/18.PNG)
 ![alt text](shots/19.PNG)
 ![alt text](shots/20.PNG)
 
-* For email create account in mailtrap and use the credentials of mail trap over here
+* For email, create account in mailtrap and use the credentials of mail trap over here
 * Enter the details of mail trap in email and run the test 
 
 ![alt text](shots/21.PNG)
@@ -308,12 +308,12 @@
 
 ![alt text](shots/23.PNG)
 
-* We will have a system with heartbeat installed which checks if the application/server is up or not and reports the status to elastic cloud (elastic search)
-* The uptime in observability section of elastic cloud will show the status of each service/server from which you can configure alerts based on connectors
+* We will have a system with heartbeat installed which checks if the application / server is up or not and reports the status to elastic cloud ( elastic search )
+* The uptime in observability section of elastic cloud will show the status of each service / server from which you can configure alerts based on connectors
 
-### Uptime Monitoring
+### Uptime monitoring
 
-* For the overview of the setup
+* Overview of the setup
 
 ![alt text](shots/24.PNG)
 
@@ -327,30 +327,30 @@
     sudo apt update
     sudo apt install apache2 -y
     ```
-* _**Heart beat installation**_ :
+#### _**Heart beat installation**_ :
     
-* For the overview [  Refer Here : https://www.elastic.co/guide/en/beats/heartbeat/current/heartbeat-installation-configuration.html ]
+* Overview [  Refer Here : https://www.elastic.co/guide/en/beats/heartbeat/current/heartbeat-installation-configuration.html ]
 
-* For official doc's on installing heart beat
+* Official doc's for installing heart beat
 
     [ Refer here : https://www.elastic.co/guide/en/beats/heartbeat/current/heartbeat-installation-configuration.html#installation ] 
     
-* For apt based installation
+* For `apt` package based installation
 
     [ Refer Here : https://www.elastic.co/guide/en/beats/heartbeat/current/setup-repositories.html#_apt ]
 
-* _**Configuration**_ :
+#### _**Configuration**_ :
 
 * All the elastic stack is generally installed and configuration files are stored in similar directories
 
-* _**config location**_ : `/etc/<prod-name>`
+* _**config location**_ : /etc/<prod-name>
 
-* _**install location**_ : `/usr/share/<prod-name>`
+* _**install location**_ : /usr/share/<prod-name>
 
-* Edit `/etc/heartbeat/heartbeat.yml` to add cloud id and auth
-* What has to be monitored
+* Edit `/etc/heartbeat/heartbeat.yml` to add cloud id and authentication
+* What has to be monitored ?
     * apache server
-    * Monitor types: 
+    * Monitor types
     
     [ Refer Here : https://www.elastic.co/guide/en/beats/heartbeat/current/configuration-heartbeat-options.html#monitor-types ]
 
@@ -358,7 +358,7 @@
 
 ![alt text](shots/25.PNG)
 
-* Start heart beat: 
+* Start heart beat 
 
     [ Refer Here : https://www.elastic.co/guide/en/beats/heartbeat/current/heartbeat-installation-configuration.html#start ]
 
@@ -369,7 +369,7 @@
 ![alt text](shots/27.PNG)
 ![alt text](shots/28.PNG)
 
-* To view th down status. stop the service and wait for the page to reload
+* To view the down status, stop the service and wait for the page to reload
 
 ![alt text](shots/29.PNG)
 
@@ -381,32 +381,32 @@
 ### Exercise
 
 * Create an alert to check if the nop-app and nop-db is up or not
-* Create a linux vm install apache/nginx.
+* Create a linux VM install apache / nginx
 * Also create uptime dashboard in elastic stack
-    * based on icmp (ping)
+    * based on icmp ( ping )
     * based on http
 
-### Basic Check list
+### Basic Checklist
 
-* Create a linux vm in any  cloud and ssh into it
+* Create a linux VM in any  cloud and ssh into it
 * Create a ssh key from cloud and importing ssh into cloud from your system
-* Concept of Service/Daemon
-* Package management – apt
-* json and yaml files
-*concept of sudo
-* using vi or nano editor
-*Fixing:
+* Concept of Service / Daemon
+* Package management – `apt`
+* JSON and YAML files
+* concept of sudo
+* using `vi` or `nano` editor
+* Fixing :
     * Post on Slack
 
-### Novice Check List
+### Novice Checklist
 
-* knowing the problem. log files and read the logs to figure out errors
-* installation steps and configuration steps for any application
+* Knowing the problem, log files and read the logs to figure out errors
+* Installation steps and configuration steps for any application
 * Concept of environmental variables and setting
     * User
     * System
 
-### Expert Check list
+### Expert Checklist
 
 * Understanding system architectures
 * System Design fundamentals
@@ -414,7 +414,7 @@
 ### Troubleshooting Beats
 
 * All the elastic componets logs can be viewed using _**journalctl**_ `journalctl -u heartbeat-elastic.service`
-* Look into yaml for syntax issues and cloud id and auth for configuration
+* Look into YAML for syntax issues and cloud id and auth for configuration
 * Ensure metrics are enabled
 
 ![alt text](shots/32.PNG)
@@ -427,14 +427,12 @@
 
     [ Refer Here : https://www.elastic.co/guide/en/beats/metricbeat/8.7/setup-repositories.html#_apt ]
 
-* We will get system and nginx metrics to elastic cloud in next session
-
-### Metric Beats to Capture Metrics
+### Metric Beats to capture metrics
 
 * Enable nginx metrics
-    * navigate to /etc/metricbeat/modules.d and rename nginx.yml.disabled to nginx.yml
-    * copy the dashboards into bin `sudo cp -r /usr/share/metricbeat/kibana/ /usr/share/metricbeat/bin`
-* Now start the metric beat after setting in metricbeat.yml
+    * Navigate to `/etc/metricbeat/modules.d` and rename nginx.yml.disabled to `nginx.yml`
+    * Copy the dashboards into bin `sudo cp -r /usr/share/metricbeat/kibana/ /usr/share/metricbeat/bin`
+* Now start the metric beat after setting in `metricbeat.yml`
     * cloud.id
     * cloud.auth
     * kibana url
@@ -456,18 +454,18 @@
     * _**ERROR**_ : This represents errors
     * _**CRITICAL/FATAL**_ : This represents serious system failures
 
-* Logs are time based information.
-* In Elastic Stack we have logstash which can extract the logs, transform and load into elastic search for querying/visualizations
+* Logs are time based information
+* In Elastic Stack we have logstash which can extract the logs, transform and load into elastic search for querying / visualizations
 * Logstash does the transformations with the help of plugins
-    * _**input plugins**_ : to read from different sources,for input plugins supported by logstash
+    * _**Input plugins**_ : to read from different sources, for input plugins supported by logstash
 
     [ Refer Here : https://www.elastic.co/guide/en/logstash/current/input-plugins.html ]
 
-    * _**filter plugins**_ : to transform the log,for filter plugins
+    * _**Filter plugins**_ : to transform the log, for filter plugins
 
     [ Refer Here : https://www.elastic.co/guide/en/logstash/current/filter-plugins.html ]
 
-    * _**output plugins**_ : to store the output to different sources, for output plugins
+    * _**Output plugins**_ : to store the output to different sources, for output plugins
 
     [ Refer Here : https://www.elastic.co/guide/en/logstash/current/output-plugins.html ]
 
@@ -481,25 +479,31 @@
 
 ### Logstash
 
-* Let's create a linux vm and explore logstash
+* Let's create a linux VM and explore logstash
 
 ### Logstash pipeline
 
-* Logstash pipeline syntax
+* Syntax
 ```
 input {}
 filter {}
 output {}
 ```
 * In input section we can define the datasources from where we process inputs `Extract`
-* In Filter section we define the transformations `Transform`
+* In filter section we define the transformations `Transform`
 * In output section we define the destination `Load`
 * The list of inputs is all the installed logstash input plugins and same with other sections
 
-### Let's create a very basic pipeline which reads input from stdin and displays out to stdout
+### Activity 1 : Let's create a very basic pipeline which reads input from stdin and displays out to stdout
 
-* Stdin input plugin Refer Here
-* Stdout output plugin Refer Here
+* Stdin input plugin 
+
+    [ Refer Here : https://www.elastic.co/guide/en/logstash/current/plugins-inputs-stdin.html ]
+
+* Stdout output plugin 
+
+    [ Refer Here : https://www.elastic.co/guide/en/logstash/current/plugins-outputs-stdout.html ]
+
 * Pipeline
 ```
 input {
@@ -531,8 +535,8 @@ output {
 ```
 ![alt text](shots/38.PNG)
 
-* Let's add one more output to some file `stdout => codec => rubydebug
-* For file output plugin
+* Let's add one more output to some file `stdout => codec => rubydebug`
+* File output plugin
 
     [ Refer Here : https://www.elastic.co/guide/en/logstash/current/plugins-outputs-file.html ]
 
@@ -571,7 +575,7 @@ output {
     }
 }
 ```
-* install apache and redirect `/var/log/apache2/access.log` to stdout
+* Install apache and redirect `/var/log/apache2/access.log` to stdout
 ```
 input {
     file {
@@ -584,7 +588,7 @@ output {
     }
 }
 ```
-* Let's try to understand filters.
+* Let's try to understand filters
 * Grok filter can parse unstructured data into fields 
 
     [ Refer Here : https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html ]
@@ -600,7 +604,7 @@ output {
 
     [ Refer Here : https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html ]
 
-* For writing your own patterns use regex 
+* For writing your own patterns use Regex 
     [ Refer Here : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet ]
 
 * Let's try to build a simple pattern as shown below
@@ -611,17 +615,17 @@ output {
 ![alt text](shots/46.PNG)
 ![alt text](shots/47.PNG)
 
-* For grok debugger
+* For Grok debugger
 
     [ Refer Here : https://grokdebugger.com/ ]
 
-### Sending logs to elastic cloud
+#### Sending logs to elastic cloud
 
 * Overview
 
 ![alt text](shots/48.PNG)
 
-* Install apache and filebeat on one linux instance 
+* Install apache and filebeat on linux instances 
 
     [ Refer Here : https://www.elastic.co/guide/en/beats/filebeat/current/setup-repositories.html ]
 
@@ -633,7 +637,7 @@ sudo apt install apache2 -y
 
     [ Refer Here : https://www.elastic.co/guide/en/logstash/current/installing-logstash.html ]
 
-### Configuring filebeats to send apache access logs to logstash
+#### Configuring filebeats to send apache access logs to logstash
 
 * For basic configuration information
 
@@ -666,12 +670,12 @@ output {
     }
 }
 ```
-* Create a file called as apache.conf in `/etc/logstash/conf.d`
+* Create a file called as `apache.conf` in `/etc/logstash/conf.d`
 * Enable and start logstash service
 
 ![alt text](shots/49.PNG)
 
-* Now configure filebeat to send logs from `/var/log/apache2/access.log` to logstash
+* Now configure filebeat to send logs from `/var/log/apache2/access.log` to `logstash`
 * To generate artifical traffic we have executed the following script
 ```
 #!/bin/bash

@@ -35,7 +35,7 @@
 * _**MTTF ( Mean Time To Fail )**_ : This refers to `average time` during the `certain to get an failure` in your system
 * _**SLA ( Service Level Agreement )**_ : This is an agreement between service provider and customer w.r.to availability and other important metrics
 
-### What has to be monitored?
+#### What has to be monitored?
 
 * Organizations and individuals who have published the best practices on implementing a `monitoring solution`
 
@@ -51,14 +51,14 @@
 
 ![alt text](shots/2.PNG)
 
-### Terms in Monitoring
+#### Terms in Monitoring
 
 * Latency
 * Traffic
 * Errors
 * Saturation
 
-### Some basic stuff
+#### Some basic stuff
 
 
 * Impact of  CPU, Memory and DISK on your applicaions
@@ -138,7 +138,7 @@
 * _**Beats**_ : Export metrics, logs, traces to Elastic Search
 * _**Kibana**_ : Creates dashboards and visualizations
 
-### Google for the following
+#### Google for the following
 
 * What are the common metrics for
     * web server ( apache )
@@ -182,13 +182,13 @@
 
 * Let's choose the same applications for both traditional and k8s
 
-### Lab Setup
+#### Lab Setup
 
 * Cloud Account (AWS/Azure)
 * Elastic Cloud (14 day free trail)
 * How to create VMs?
 
-### Options
+#### Options
 
 * Ecommerce
     * shopizer ( java )
@@ -226,7 +226,7 @@
     * Manual
     * Automated 
 
-### nopCommerce Architecture
+#### nopCommerce Architecture
 
 * This  application has two  servers involved
 
@@ -251,7 +251,7 @@
 
     [ Refer Here : https://docs.nopcommerce.com/en/installation-and-upgrading/installing-nopcommerce/installing-on-linux.html ]
 
-### Next Steps
+#### Next Steps
 
 * Let's create a basic check to verify if
     * the server is alive
@@ -302,7 +302,7 @@
 ![alt text](shots/21.PNG)
 ![alt text](shots/22.PNG)
 
-### Workflow
+#### Workflow
 
 * Overview
 
@@ -378,7 +378,7 @@
 ![alt text](shots/30.PNG)
 ![alt text](shots/31.PNG)
 
-### Exercise
+#### Exercise
 
 * Create an alert to check if the nop-app and nop-db is up or not
 * Create a linux VM install apache / nginx
@@ -427,7 +427,7 @@
 
     [ Refer Here : https://www.elastic.co/guide/en/beats/metricbeat/8.7/setup-repositories.html#_apt ]
 
-### Metric Beats to capture metrics
+#### Metric Beats to capture metrics
 
 * Enable nginx metrics
     * Navigate to `/etc/metricbeat/modules.d` and rename nginx.yml.disabled to `nginx.yml`
@@ -446,7 +446,6 @@
     ![alt text](shots/35.PNG)
 
 ### Log Analysis
-
 
 * Every logging mechanism will have levels, most widely adopted levels are
     * _**INFO**_ : This is informational log
@@ -481,7 +480,7 @@
 
 * Let's create a linux VM and explore logstash
 
-### Logstash pipeline
+#### Logstash pipeline
 
 * Syntax
 ```
@@ -702,7 +701,7 @@ done
 
 * We were able to search logs by writing simple queries and create pie charts, line charts, metric etc
 
-### Let's trace some java application
+### Tracing a java application
 
 * Installing sample application
     * openjdk 11
@@ -755,7 +754,7 @@ java -javaagent:elastic-apm-agent-1.38.0.jar \
 
     [ Refer Here : https://directdevops.blog/2019/10/22/site-reliability-engineering-overview/ ]
 
-### Exercises
+#### Exercises
 
  1. Make nop commerce observable
  2. Post k8s metrics to elastic cloud

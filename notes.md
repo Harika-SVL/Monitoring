@@ -1,4 +1,4 @@
-### Hospital Management System – Needs W.r.t Application Stability
+### Hospital Management System – Needs W.r.to Application Stability
 
 * The architecture of management system is as follows
 

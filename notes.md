@@ -76,7 +76,7 @@
 * For detailed info on `logs v/s metrics v/s traces`
 
     [ Refer Here : https://microsoft.github.io/code-with-engineering-playbook/observability/log-vs-metric-vs-trace/ ]
-
+     
 * Metrics are numeric time-series data
 
 ### Logs
@@ -103,6 +103,12 @@
 * Tools
 
 ![alt text](shots/5.PNG)
+
+####  When to use metric or log data to track a particular piece of telemetry, can be summarized with the following points:
+
+* Use _**metrics**_ to track the occurrence of an event, counting of items, the time taken to perform an action or to report the current value of a resource (CPU, memory, etc.)
+* Use _**logs**_ to track detailed information about an event also monitored by a metric, particularly errors, warnings or other exceptional situations
+* A _**trace**_ provides visibility into how a request is processed across multiple services in a microservices environment. Every trace needs to have a unique identifier associated with it
 
 ### Pull v/s Push Monitoring
 

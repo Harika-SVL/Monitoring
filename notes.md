@@ -148,19 +148,19 @@
 
 * _**Web Servers**_ :
 
-  1. Response time
-  2. Error rate
-  3. CPU usage
-  4. Hard Disk space
-  5. Active connections
-  6. Incoming requests
-  7. Load time
-  8. Bounce rate
-  9. Conversion rate
-  10. Average session duration
-  11. Average time on page
-  12. Traffic sources
-  13. Uptime
+ 1. Response time
+ 2. Error rate
+ 3. CPU usage
+ 4. Hard Disk space
+ 5. Active connections
+ 6. Incoming requests
+ 7. Load time
+ 8. Bounce rate
+ 9. Conversion rate
+ 10. Average session duration
+ 11. Average time on page
+ 12. Traffic sources
+ 13. Uptime
 
 * _**Server**_ :
 

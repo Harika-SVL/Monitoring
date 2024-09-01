@@ -144,28 +144,42 @@
 * _**Beats**_ : Export metrics, logs, traces to Elastic Search
 * _**Kibana**_ : Creates dashboards and visualizations
 
-#### Google for the following
+#### What are the common metrics for a web server ( e.g : apache ) and database ( e.g : mysql ) ?
 
-* What are the common metrics for
-    * web server ( apache )
-    * database ( mysql )
-* Web Servers
-    * Requests per second
-    * Errors
-    * Thread count
-    * Response Time ( Average )
-* Server
-    * CPU Uilization
-    * Free Memory / Used Memory
-    * Disk Space
-    * Disk I/O
-    * Network
-        * Incoming
-        * Outgoing
-* Databases
-    * Number of Connetions
-    * Size of Data Processed per second
-    * Database Size
+* _**Web Servers**_ :
+
+  1. Response time
+  2. Error rate
+  3. CPU usage
+  4. Hard Disk space
+  5. Active connections
+  6. Incoming requests
+  7. Load time
+  8. Bounce rate
+  9. Conversion rate
+  10. Average session duration
+  11. Average time on page
+  12. Traffic sources
+  13. Uptime
+
+* _**Server**_ :
+
+  1. Uptime
+  2. Error rate
+  3. Response time
+  4. CPU usage
+  5. Memory usage
+  6. Requests per second
+  7. Peak response time
+  8. Thread count
+
+* _**Databases**_ :
+
+  1. Data quality
+  2. Backup metrics
+  3. Availability and resource consumption
+  4. Cache
+  5. Workload performance
 
 ### Applications we will be observing
 

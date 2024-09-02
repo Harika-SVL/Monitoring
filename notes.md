@@ -164,22 +164,22 @@
 
 * _**Server**_ :
 
-  1. Uptime
-  2. Error rate
-  3. Response time
-  4. CPU usage
-  5. Memory usage
-  6. Requests per second
-  7. Peak response time
-  8. Thread count
+ 1. Uptime
+ 2. Error rate
+ 3. Response time
+ 4. CPU usage
+ 5. Memory usage
+ 6. Requests per second
+ 7. Peak response time
+ 8. Thread count
 
 * _**Databases**_ :
 
-  1. Data quality
-  2. Backup metrics
-  3. Availability and resource consumption
-  4. Cache
-  5. Workload performance
+ 1. Data quality
+ 2. Backup metrics
+ 3. Availability and resource consumption
+ 4. Cache
+ 5. Workload performance
 
 ### Applications we will be observing
 

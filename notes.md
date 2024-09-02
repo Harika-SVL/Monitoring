@@ -183,14 +183,15 @@
 
 ### Applications we will be observing
 
-
  1. _**Traditional Applications**_ : These are the applications which run on physical or virtual machines hosted on-premises or cloud
  2. _**Containerized Applications**_ : These will be the applications running on kubernetes cluster
+
 * Technology :
     * Python
     * .net
     * C#
     * nodejs
+    
 * Approach :
     * We will be getting info in the following order
         * metrics

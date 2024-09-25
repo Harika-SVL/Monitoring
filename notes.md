@@ -258,7 +258,7 @@
  2. Database
     * We will be using mysql database
     * This can be a managed database
-
+xx
     ![alt text](shots/9.PNG)
 
 ### Realizing the application in AWS
